@@ -5,12 +5,12 @@ export const ProfessionalBanner = () => {
   return (
     <section id="parceria" className="px-4 py-12">
       <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[16/9] md:aspect-[21/7] min-h-[400px] flex items-center justify-center text-center p-8">
-        
+
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1559839734-2b71f1e3c770?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            src="/assets/photos/professional-banner.jpg"
             alt="Profissionais de saúde parceiros"
             className="w-full h-full object-cover"
           />

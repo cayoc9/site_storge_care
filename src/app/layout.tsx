@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Serviços de cuidado e proteção especializados",
 };
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "AW-17990509984";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export default function RootLayout({
   children,
@@ -31,19 +31,23 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Google Tag Manager */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GTM_ID}');
-          `}
-        </Script>
+        {GTM_ID ? (
+          <>
+            {/* Google Tag Manager */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GTM_ID}');
+                `}
+            </Script>
+          </>
+        ) : null}
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

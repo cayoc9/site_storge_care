@@ -5,12 +5,12 @@ export const CTASection = () => {
   return (
     <section className="py-24 px-4">
       <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[4/5] md:aspect-[16/9] min-h-[500px] md:min-h-[400px] flex items-center justify-center text-center p-8">
-        
+
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1581578731522-7452f9692182?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            src="/assets/photos/cta.jpg"
             alt="Agendamento rápido"
             className="w-full h-full object-cover"
           />

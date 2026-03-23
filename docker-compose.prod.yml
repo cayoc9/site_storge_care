@@ -1,0 +1,79 @@
+# ========================================
+# Docker Compose - PRODUÇÃO
+# ========================================
+# Uso: docker-compose -f docker-compose.prod.yml up -d
+#
+# Antes de usar:
+# 1. Copie .env.example para .env.production
+# 2. Altere TODAS as senhas e segredos
+# 3. Configure NEXT_PUBLIC_SERVER_URL com seu domínio real
+# 4. Configure DATABASE_URI com seu banco de dados real
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: storge-care-db-prod
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data-prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - storge-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: storge-care-app-prod
+    restart: always
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_URI: ${DATABASE_URI}
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET}
+      NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL}
+      NEXT_PUBLIC_GTM_ID: ${NEXT_PUBLIC_GTM_ID}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - storge-network
+    # Para produção, considere adicionar:
+    # - labels para Traefik/Nginx
+    # - logging configuration
+    # - resource limits
+
+  # Opcional: Nginx reverse proxy para produção
+  # web:
+  #   image: nginx:alpine
+  #   container_name: storge-care-nginx
+  #   restart: always
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - app
+  #   networks:
+  #     - storge-network
+
+volumes:
+  db-data-prod:
+    driver: local
+
+networks:
+  storge-network:
+    driver: bridge

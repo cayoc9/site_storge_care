@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 export const CTASection = () => {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[16/9] flex items-center justify-center text-center p-8">
+      <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[4/5] md:aspect-[16/9] min-h-[500px] md:min-h-[400px] flex items-center justify-center text-center p-8">
         
         {/* Background */}
         <div className="absolute inset-0 z-0">

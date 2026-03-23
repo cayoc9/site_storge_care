@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Facebook, Instagram, Github, MapPin, Phone } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -12,11 +12,8 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="max-w-xs space-y-6">
             <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center relative">
-                    <div className="w-4 h-1 bg-storge-primary absolute"></div>
-                    <div className="w-1 h-4 bg-storge-primary absolute"></div>
-                </div>
-                <span className="text-xl font-bold tracking-tighter">StorgeCare</span>
+                <img src="/assets/logo.svg" alt="Storge Care Logo" className="w-10 h-10 brightness-0 invert" />
+                <span className="text-xl font-bold tracking-tighter uppercase">Storge Care</span>
             </div>
             <p className="text-white/80 leading-relaxed text-sm">
                 Estamos comprometidos em fornecer atendimento de saúde de alta qualidade, 
@@ -40,15 +37,20 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-white/60">
-            © 2025 StorgeCare. Todos os direitos reservados.
+            © 2025 Storge Care. Todos os direitos reservados.
           </p>
           
           {/* Social Links */}
           <div className="flex items-center gap-6">
-            <a href="#" className="text-white/60 hover:text-white transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors"><Facebook size={20} /></a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors"><Github size={20} /></a>
+            <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                <img src="/assets/x.svg" alt="X (Twitter)" className="w-5 h-5 invert" />
+            </a>
+            <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                <img src="/assets/facebook.svg" alt="Facebook" className="w-5 h-5 invert" />
+            </a>
+            <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                <img src="/assets/instagram.svg" alt="Instagram" className="w-5 h-5 invert" />
+            </a>
           </div>
         </div>
       </div>

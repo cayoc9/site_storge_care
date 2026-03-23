@@ -17,17 +17,17 @@ export const ProfessionalBanner = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-20 max-w-2xl text-white space-y-6 animate-in fade-in zoom-in duration-700">
-          <p className="text-sm font-bold tracking-[0.2em] text-storge-primary uppercase">Profissionais da saúde</p>
+        <div className="relative z-20 max-w-3xl text-white space-y-6 animate-in fade-in zoom-in duration-700">
+          <p className="text-sm font-bold tracking-[0.2em] text-storge-primary uppercase">Para profissionais de saúde</p>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-            Atenda mais pacientes e <br /> aumente sua renda.
+            Seja um profissional parceiro <br /> da nossa plataforma.
           </h2>
-          <p className="text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
-            Seja conectado a pacientes domiciliares que buscam profissionais nas áreas de enfermagem, fisioterapia, odontologia e terapia ocupacional.
+          <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+            Se cadastre e consiga atender mais pacientes, ter uma renda extra e ainda ter acesso a cursos e certificações de diversos procedimentos especializados.
           </p>
           <div className="pt-4">
             <Button size="lg" className="bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-10 h-14 text-base font-bold">
-              Quero me cadastrar
+              Faça seu cadastro
             </Button>
           </div>
         </div>

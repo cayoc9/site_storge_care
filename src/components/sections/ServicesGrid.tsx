@@ -4,9 +4,9 @@ import { ArrowUpRight } from 'lucide-react';
 export const ServicesGrid = () => {
   const services = [
     {
-      title: "Cuidado materno-infantil",
-      description: "Aleitamento materno, Fototerapia domiciliar, Laserterapia, Furo de orelha humanizado.",
-      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=800"
+      title: "Troca de curativos",
+      description: "Cuidados especializados com feridas e pós-operatórios.",
+      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: "Cuidadoria",
@@ -14,48 +14,73 @@ export const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1581578731522-7452f9692182?auto=format&fit=crop&q=80&w=800"
     },
     {
-      title: "Enfermagem domiciliar",
-      description: "Curativos e Aplicação de medicamentos.",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+      title: "Aplicação de medicamentos",
+      description: "Administração segura de injetáveis e medicações prescritas.",
+      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      title: "Acompanhamentos",
+      description: "Suporte em consultas, exames e procedimentos externos.",
+      image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      title: "Cuidados com colostomia",
+      description: "Orientações e cuidados especializados com estomias.",
+      image: "https://images.unsplash.com/photo-1559839734-2b71f1e3c770?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      title: "Fisioterapia neurológica",
+      description: "Reabilitação focada em pacientes com sequelas neurológicas.",
+      image: "https://images.unsplash.com/photo-1590611380053-1fd55971a7bb?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      title: "Fisioterapia respiratória",
+      description: "Cuidados específicos para saúde cardiorrespiratória.",
+      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      title: "Plantões de 6 a 24hrs",
+      description: "Assistência contínua adaptada à necessidade da família.",
+      image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce2?auto=format&fit=crop&q=80&w=800"
     }
   ];
 
   return (
-    <section id="servicos" className="bg-storge-primary py-24 px-4">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <section id="servicos" className="bg-storge-primary py-32 px-4">
+      <div className="max-w-7xl mx-auto space-y-20">
         
         {/* Header */}
-        <div className="text-center text-white space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Serviços que você pode <br className="hidden md:block" /> agendar em casa:
+        <div className="text-center text-white space-y-6">
+          <h2 className="text-3xl md:text-6xl font-bold tracking-tighter">
+            Especialidades na palma da sua mão <br className="hidden md:block" /> com a Storge.
           </h2>
-          <p className="text-white/80 text-lg max-w-xl mx-auto">
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-medium">
             Mais de 20 tipos de atendimento sem precisar sair de casa.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className="group cursor-pointer">
+            <div key={idx} className="group cursor-pointer bg-white/5 rounded-[2rem] p-5 transition-all duration-500 hover:bg-white/10 hover:-translate-y-2 border border-white/10">
               {/* Image Container */}
-              <div className="relative rounded-storge overflow-hidden aspect-square shadow-xl mb-6">
+              <div className="relative rounded-[1.5rem] overflow-hidden aspect-[4/3] mb-6 shadow-2xl">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
                 
                 {/* Arrow Icon Badge */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <ArrowUpRight className="text-storge-primary w-6 h-6" />
+                <div className="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transform scale-0 group-hover:scale-100 transition-all duration-500">
+                  <ArrowUpRight className="text-storge-primary w-5 h-5" />
                 </div>
               </div>
 
               {/* Text */}
-              <div className="text-white text-center space-y-2">
-                <h4 className="text-2xl font-bold">{service.title}</h4>
-                <p className="text-white/70 text-sm leading-relaxed px-4">
+              <div className="text-white text-left space-y-2">
+                <h4 className="text-xl font-bold leading-tight group-hover:text-storge-light transition-colors">{service.title}</h4>
+                <p className="text-white/60 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>

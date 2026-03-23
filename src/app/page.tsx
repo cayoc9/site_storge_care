@@ -6,6 +6,7 @@ import { WhyStorge } from "@/components/sections/WhyStorge";
 import { ProfessionalBanner } from "@/components/sections/ProfessionalBanner";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CTASection } from "@/components/sections/CTASection";
+import { StepsSection } from "@/components/sections/StepsSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       
       <div className="flex flex-col">
         <HeroSection />
+        
+        <StepsSection />
         
         <ValueProposition />
         

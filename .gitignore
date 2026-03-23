@@ -33,3 +33,46 @@ next-env.d.ts
 
 # Payload
 payload-types.ts
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Docker
+.dockerignore
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment files (keep .env.example)
+.env
+.env.*.local
+
+# Database
+*.sqlite
+*.db
+
+# Arquivos de Desenvolvimento:
+.playwright-cli
+
+# Framer automation (keep scripts/docs)
+framer

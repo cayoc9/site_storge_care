@@ -6,7 +6,7 @@ export const ServicesGrid = () => {
     {
       title: "Troca de curativos",
       description: "Cuidados especializados com feridas e pós-operatórios.",
-      image: "/assets/photos/service-curativos-alt.jpg"
+      image: "/assets/photos/service-curativos.jpg"
     },
     {
       title: "Cuidadoria",
@@ -16,7 +16,7 @@ export const ServicesGrid = () => {
     {
       title: "Aplicação de medicamentos",
       description: "Administração segura de injetáveis e medicações prescritas.",
-      image: "/assets/photos/service-medicamentos-alt.jpg"
+      image: "/assets/photos/service-medicamentos.jpg"
     },
     {
       title: "Acompanhamentos",
@@ -36,12 +36,12 @@ export const ServicesGrid = () => {
     {
       title: "Fisioterapia respiratória",
       description: "Cuidados específicos para saúde cardiorrespiratória.",
-      image: "/assets/photos/service-fisio-resp-alt.jpg"
+      image: "/assets/photos/service-fisio-resp.jpg"
     },
     {
       title: "Plantões de 6 a 24hrs",
       description: "Assistência contínua adaptada à necessidade da família.",
-      image: "/assets/photos/service-plantoes-alt.jpg"
+      image: "/assets/photos/service-plantoes.jpg"
     }
   ];
 

@@ -13,8 +13,8 @@ export const Footer = () => {
           
           {/* Brand Info */}
           <div className="max-w-xs space-y-6">
-            <div className="flex items-center gap-2">
-                <img src="/assets/logo.svg" alt="Storge Care Logo" className="w-10 h-10 brightness-0 invert" />
+            <div className="flex items-center gap-2 group">
+                <img src="/assets/logo.svg" alt="Storge Care Logo" className="w-10 h-10 group-hover:scale-110 transition-transform" />
                 <span className="text-xl font-bold tracking-tighter uppercase">Storge Care</span>
             </div>
             <p className="text-white/80 leading-relaxed text-sm">

@@ -90,8 +90,8 @@ export const VaccinesSection = () => {
             </div>
           </div>
 
-          <div className="rounded-[2rem] overflow-hidden bg-storge-dark text-white border border-storge-dark/10 shadow-2xl shadow-storge-dark/10">
-            <div className="p-8 md:p-10 space-y-8">
+          <div className="rounded-[2rem] overflow-hidden bg-storge-dark text-white border border-storge-dark/10 shadow-2xl shadow-storge-dark/10 min-h-96">
+            <div className="p-8 md:p-10 space-y-8 h-full flex flex-col justify-between">
               <div className="space-y-4">
                 <p className="text-sm font-bold tracking-[0.3em] text-white/60 uppercase">
                   Uma experiencia mais confortavel
@@ -129,7 +129,7 @@ export const VaccinesSection = () => {
                 href={STORGE_WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-storge-primary px-8 text-base font-bold text-white transition-all hover:scale-[1.01] hover:bg-storge-primary/90"
+                className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-storge-primary px-8 text-base font-bold text-white transition-all hover:scale-105 hover:bg-storge-primary/90"
               >
                 Agendar vacinacao pelo WhatsApp
               </a>

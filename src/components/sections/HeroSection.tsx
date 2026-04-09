@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Play } from 'lucide-react';
 
 import { STORGE_WHATSAPP_URL } from '@/lib/site';
@@ -41,10 +40,10 @@ export const HeroSection = () => {
               >
                 Agendar procedimento
               </a>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white/10 rounded-full px-8 h-14 text-base font-bold">
+              <button className="inline-flex min-h-14 w-full sm:w-auto items-center justify-center rounded-full border-2 border-white text-white transition-all hover:bg-white/10 px-8 text-base font-bold font-bold">
                 <Play className="mr-2 h-5 w-5 fill-white" />
                 Assistir Manifesto
-              </Button>
+              </button>
             </div>
           </div>
         </div>

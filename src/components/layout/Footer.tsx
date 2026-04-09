@@ -7,19 +7,19 @@ export const Footer = () => {
   return (
     <footer className="bg-storge-primary text-white py-16 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
-        
+
         {/* Top Content */}
         <div className="flex flex-col md:flex-row justify-between gap-12 border-b border-white/20 pb-12">
-          
+
           {/* Brand Info */}
           <div className="max-w-xs space-y-6">
             <div className="flex items-center gap-2 group">
-                <img src="/assets/logo.svg" alt="Storge Care Logo" className="w-10 h-10 group-hover:scale-110 transition-transform" />
-                <span className="text-xl font-bold tracking-tighter uppercase">Storge Care</span>
+              <img src="/assets/logo.svg" alt="Storge Care Logo" className="w-10 h-10 group-hover:scale-110 transition-transform" />
+              <span className="text-xl font-bold tracking-tighter uppercase">Storge Care</span>
             </div>
             <p className="text-white/80 leading-relaxed text-sm">
-                Estamos comprometidos em fornecer atendimento de saúde de alta qualidade, 
-                priorizando o seu conforto e o cuidado humanizado.
+              Estamos comprometidos em fornecer atendimento de saúde de alta qualidade,
+              priorizando o seu conforto e o cuidado humanizado.
             </p>
           </div>
 
@@ -43,17 +43,17 @@ export const Footer = () => {
           <p className="text-sm text-white/60">
             © 2025 Storge Care. Todos os direitos reservados.
           </p>
-          
+
           {/* Social Links */}
           <div className="flex items-center gap-6">
             <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
-                <img src="/assets/x.svg" alt="X (Twitter)" className="w-5 h-5 invert" />
+              <img src="/assets/x.svg" alt="X (Twitter)" className="w-5 h-5 invert" />
             </a>
             <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
-                <img src="/assets/facebook.svg" alt="Facebook" className="w-5 h-5 invert" />
+              <img src="/assets/facebook.svg" alt="Facebook" className="w-5 h-5 invert" />
             </a>
             <a href="#" className="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
-                <img src="/assets/instagram.svg" alt="Instagram" className="w-5 h-5 invert" />
+              <img src="/assets/instagram.svg" alt="Instagram" className="w-5 h-5 invert" />
             </a>
           </div>
         </div>

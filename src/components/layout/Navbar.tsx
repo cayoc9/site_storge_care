@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Phone, Menu } from 'lucide-react';
 
+import { STORGE_PHONE_DISPLAY, STORGE_PHONE_TEL, STORGE_WHATSAPP_URL } from '@/lib/site';
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -29,21 +31,26 @@ export const Navbar = () => {
             <Link href="#servicos" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors">
               Nossos Serviços
             </Link>
+            <Link href="#vacinas" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors">
+              Vacinas
+            </Link>
             <Link href="#parceria" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors">
               Quero fazer parte
             </Link>
 
             <div className="flex items-center gap-4 ml-4">
-              <a href="tel:+5591993726000" className="flex items-center gap-2 text-sm font-bold text-storge-dark">
+              <a href={STORGE_PHONE_TEL} className="flex items-center gap-2 text-sm font-bold text-storge-dark">
                 <Phone size={16} className="text-storge-primary" />
-                +55 91 99372-6000
+                {STORGE_PHONE_DISPLAY}
               </a>
-              <Link
-                href="#sobre"
+              <a
+                href={STORGE_WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-6 h-10 text-sm font-medium shadow-lg shadow-storge-primary/20"
               >
                 Agendar atendimento
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -70,20 +77,25 @@ export const Navbar = () => {
               <Link href="#servicos" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors" onClick={closeMobileMenu}>
                 Nossos Serviços
               </Link>
+              <Link href="#vacinas" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors" onClick={closeMobileMenu}>
+                Vacinas
+              </Link>
               <Link href="#parceria" className="text-sm font-medium text-storge-dark/80 hover:text-storge-primary transition-colors" onClick={closeMobileMenu}>
                 Quero fazer parte
               </Link>
-              <a href="tel:+5591993726000" className="flex items-center gap-2 text-sm font-bold text-storge-dark" onClick={closeMobileMenu}>
+              <a href={STORGE_PHONE_TEL} className="flex items-center gap-2 text-sm font-bold text-storge-dark" onClick={closeMobileMenu}>
                 <Phone size={16} className="text-storge-primary" />
-                +55 91 99372-6000
+                {STORGE_PHONE_DISPLAY}
               </a>
-              <Link
-                href="#sobre"
+              <a
+                href={STORGE_WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
                 onClick={closeMobileMenu}
                 className="inline-flex items-center justify-center bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-6 h-10 text-sm font-medium shadow-lg shadow-storge-primary/20 w-full"
               >
                 Agendar atendimento
-              </Link>
+              </a>
             </div>
           </div>
         )}

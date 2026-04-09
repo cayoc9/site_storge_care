@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { MapPin } from 'lucide-react';
+
+import { STORGE_WHATSAPP_URL } from '@/lib/site';
 
 export const ValueProposition = () => {
   return (
@@ -49,9 +50,14 @@ export const ValueProposition = () => {
           </p>
 
           <div className="pt-4">
-            <Button size="lg" className="w-full sm:w-auto bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-10 h-16 text-lg font-bold shadow-xl shadow-storge-primary/20 transition-all hover:scale-105">
+            <a
+              href={STORGE_WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-16 w-full sm:w-auto items-center justify-center rounded-full bg-storge-primary px-10 text-lg font-bold text-white shadow-xl shadow-storge-primary/20 transition-all hover:scale-105 hover:bg-storge-primary/90"
+            >
               Agendar atendimento
-            </Button>
+            </a>
           </div>
         </div>
       </div>

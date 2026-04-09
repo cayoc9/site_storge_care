@@ -1,6 +1,8 @@
 import React from 'react';
 import { MapPin, Phone } from 'lucide-react';
 
+import { STORGE_PHONE_DISPLAY, STORGE_PHONE_TEL } from '@/lib/site';
+
 export const Footer = () => {
   return (
     <footer className="bg-storge-primary text-white py-16 px-4">
@@ -25,7 +27,9 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-white/60" />
-              <p className="text-sm font-bold">Fone: +55 91 99372-6000</p>
+              <a href={STORGE_PHONE_TEL} className="text-sm font-bold hover:text-white/80 transition-colors">
+                Fone: {STORGE_PHONE_DISPLAY}
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <MapPin size={18} className="text-white/60" />

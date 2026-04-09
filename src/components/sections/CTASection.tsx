@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
+
+import { STORGE_WHATSAPP_URL } from '@/lib/site';
 
 export const CTASection = () => {
   return (
@@ -26,9 +27,14 @@ export const CTASection = () => {
             De forma simples, acessível e segura, no conforto da sua casa.
           </p>
           <div className="pt-4">
-            <Button size="lg" className="w-full sm:w-auto bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-10 h-14 text-base font-bold transition-all hover:scale-105 active:scale-95">
+            <a
+              href={STORGE_WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-14 w-full sm:w-auto items-center justify-center rounded-full bg-storge-primary px-10 text-base font-bold text-white transition-all hover:scale-105 hover:bg-storge-primary/90 active:scale-95"
+            >
               Agendar agora
-            </Button>
+            </a>
           </div>
         </div>
       </div>

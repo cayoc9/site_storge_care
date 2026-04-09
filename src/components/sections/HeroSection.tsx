@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Play } from 'lucide-react';
 
+import { STORGE_WHATSAPP_URL } from '@/lib/site';
+
 export const HeroSection = () => {
   return (
     <section className="relative pt-24 pb-12 lg:pt-48 lg:pb-32 overflow-hidden px-4">
@@ -31,9 +33,14 @@ export const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center lg:items-start justify-center lg:justify-start">
-              <Button size="lg" className="w-full sm:w-auto bg-storge-primary hover:bg-storge-primary/90 text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-storge-primary/20">
+              <a
+                href={STORGE_WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-14 w-full sm:w-auto items-center justify-center rounded-full bg-storge-primary px-8 text-base font-bold text-white shadow-lg shadow-storge-primary/20 transition-colors hover:bg-storge-primary/90"
+              >
                 Agendar procedimento
-              </Button>
+              </a>
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white/10 rounded-full px-8 h-14 text-base font-bold">
                 <Play className="mr-2 h-5 w-5 fill-white" />
                 Assistir Manifesto

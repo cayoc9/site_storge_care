@@ -5,6 +5,7 @@ import { ValueProposition } from "@/components/sections/ValueProposition";
 import { WhyStorge } from "@/components/sections/WhyStorge";
 import { ProfessionalBanner } from "@/components/sections/ProfessionalBanner";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { VaccinesSection } from "@/components/sections/VaccinesSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { StepsSection } from "@/components/sections/StepsSection";
 
@@ -25,6 +26,8 @@ export default function Home() {
         <ProfessionalBanner />
         
         <ServicesGrid />
+
+        <VaccinesSection />
         
         <CTASection />
       </div>

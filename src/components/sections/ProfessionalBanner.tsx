@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 
 export const ProfessionalBanner = () => {
   return (
-    <section id="parceria" className="px-4 py-12">
-      <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[16/9] md:aspect-[21/7] min-h-[400px] flex items-center justify-center text-center p-8">
+    <section id="parceria" className="px-4 py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto relative rounded-storge overflow-hidden aspect-[16/9] md:aspect-[18/7] min-h-[440px] md:min-h-[500px] flex items-center justify-center text-center p-8 md:p-10 lg:p-14">
 
         {/* Background */}
         <div className="absolute inset-0 z-0">
@@ -17,12 +17,12 @@ export const ProfessionalBanner = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-20 max-w-3xl text-white space-y-6 animate-in fade-in zoom-in duration-700">
+        <div className="relative z-20 max-w-4xl text-white space-y-6 animate-in fade-in zoom-in duration-700">
           <p className="text-sm font-bold tracking-[0.2em] text-storge-primary uppercase">Para profissionais de saúde</p>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
             Seja um profissional parceiro <br /> da nossa plataforma.
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Se cadastre e consiga atender mais pacientes, ter uma renda extra e ainda ter acesso a cursos e certificações de diversos procedimentos especializados.
           </p>
           <div className="pt-4">
